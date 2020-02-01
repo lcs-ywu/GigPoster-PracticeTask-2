@@ -33,7 +33,53 @@ let brown = Color(hue: 38, saturation: 99, brightness: 38, alpha: 100)
 let lightRed = Color(hue: 10, saturation: 80, brightness: 80, alpha: 75)
 
 // Begin your solution here...
+canvas.fillColor=yellow
+canvas.drawRectangle(at: Point(x:0,y:0), width: 400, height: 600)
 
+//Start drawing purple polygons
+//Make a list (array) of vertices
+var polygonVertices:[Point] = [] // empty list of Point objects
+polygonVertices.append(Point(x: 20, y: 50))
+polygonVertices.append(Point(x: 170, y: 50))
+polygonVertices.append(Point(x: 220, y: 150))
+polygonVertices.append(Point(x: 70, y: 150))
+
+var polygonVertices2:[Point] = [] // empty list of Point objects
+polygonVertices2.append(Point(x: 20, y: 225))
+polygonVertices2.append(Point(x: 170, y: 225))
+polygonVertices2.append(Point(x: 220, y: 325))
+polygonVertices2.append(Point(x: 70, y: 325))
+
+var polygonVertices3:[Point] = [] // empty list of Point objects
+polygonVertices3.append(Point(x: 340, y: 225))
+polygonVertices3.append(Point(x: 400, y: 225))
+polygonVertices3.append(Point(x: 400, y: 325))
+polygonVertices3.append(Point(x: 390, y: 325))
+
+var polygonVertices4:[Point] = [] // empty list of Point objects
+polygonVertices4.append(Point(x: 340, y: 50))
+polygonVertices4.append(Point(x: 400, y: 50))
+polygonVertices4.append(Point(x: 400, y: 150))
+polygonVertices4.append(Point(x: 390, y: 150))
+
+canvas.fillColor = purple
+canvas.drawCustomShape(with: polygonVertices)
+canvas.drawCustomShape(with: polygonVertices2)
+canvas.drawCustomShape(with: polygonVertices3)
+canvas.drawCustomShape(with: polygonVertices4)
+
+
+
+
+
+
+//Last, draw a grid for referennce
+for y in stride(from: 0, through: 600, by: 50){
+    canvas.drawLine(from: Point(x:0,y:y), to: Point(x:400,y:y))
+}
+for x in stride(from: 0, through: 400, by: 50){
+    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+}
 
 /*:
  ## Use Source Control
