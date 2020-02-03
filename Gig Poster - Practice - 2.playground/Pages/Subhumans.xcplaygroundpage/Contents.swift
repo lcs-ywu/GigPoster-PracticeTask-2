@@ -38,6 +38,7 @@ canvas.drawRectangle(at: Point(x:0,y:0), width: 400, height: 600)
 
 //Start drawing purple polygons
 //Make a list (array) of vertices
+
 var polygonVertices:[Point] = [] // empty list of Point objects
 polygonVertices.append(Point(x: 20, y: 50))
 polygonVertices.append(Point(x: 170, y: 50))
@@ -63,13 +64,23 @@ polygonVertices4.append(Point(x: 400, y: 150))
 polygonVertices4.append(Point(x: 390, y: 150))
 
 canvas.fillColor = purple
+canvas.drawShapesWithBorders=false
 canvas.drawCustomShape(with: polygonVertices)
 canvas.drawCustomShape(with: polygonVertices2)
 canvas.drawCustomShape(with: polygonVertices3)
 canvas.drawCustomShape(with: polygonVertices4)
 
-
-
+//Red polygons
+canvas.fillColor=lightRed
+for n in 0...3 {
+    var redPolygonVertices:[Point] = [] // empty list of Point objects
+    redPolygonVertices.append(Point(x: -140+160*n, y: 135))
+    redPolygonVertices.append(Point(x: 10+160*n, y: 135))
+    redPolygonVertices.append(Point(x: 60+160*n, y: 235))
+    redPolygonVertices.append(Point(x: -90+160*n, y: 235))
+    canvas.drawShapesWithBorders=false
+    canvas.drawCustomShape(with: redPolygonVertices)
+}
 
 
 
