@@ -70,19 +70,8 @@ canvas.drawCustomShape(with: polygonVertices2)
 canvas.drawCustomShape(with: polygonVertices3)
 canvas.drawCustomShape(with: polygonVertices4)
 
-//Red polygons
-canvas.fillColor=lightRed
-for n in 0...3 {
-    var redPolygonVertices:[Point] = [] // empty list of Point objects
-    redPolygonVertices.append(Point(x: -140+160*n, y: 135))
-    redPolygonVertices.append(Point(x: 10+160*n, y: 135))
-    redPolygonVertices.append(Point(x: 60+160*n, y: 235))
-    redPolygonVertices.append(Point(x: -90+160*n, y: 235))
-    canvas.drawShapesWithBorders=false
-    canvas.drawCustomShape(with: redPolygonVertices)
-}
 
-//Brown parallelograms
+//Brown parallelograms using two fpr in loops
 for a in 0...1 {
     for b in 0...1 {
         var brownPolygonVertices:[Point] = []
@@ -95,6 +84,20 @@ for a in 0...1 {
         canvas.drawCustomShape(with: brownPolygonVertices)
     }
 }
+//Red polygons
+canvas.fillColor=lightRed
+for n in 0...3 {
+    var redPolygonVertices:[Point] = [] // empty list of Point objects
+    redPolygonVertices.append(Point(x: -140+160*n, y: 135))
+    redPolygonVertices.append(Point(x: 10+160*n, y: 135))
+    redPolygonVertices.append(Point(x: 60+160*n, y: 235))
+    redPolygonVertices.append(Point(x: -90+160*n, y: 235))
+    canvas.drawShapesWithBorders=false
+    canvas.drawCustomShape(with: redPolygonVertices)
+}
+
+
+
 
 
 
