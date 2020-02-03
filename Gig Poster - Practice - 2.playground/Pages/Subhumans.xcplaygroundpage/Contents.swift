@@ -95,20 +95,27 @@ for n in 0...3 {
     canvas.drawShapesWithBorders=false
     canvas.drawCustomShape(with: redPolygonVertices)
 }
+canvas.drawText(message: "subhumans", at: Point(x:10, y:320), size: 49)
+canvas.drawText(message: "friday, april 13 1984", at: Point(x:10, y:428), size: 10)
+canvas.drawText(message: "advance $6.50, door $7.50", at: Point(x:10, y:413), size: 10)
+canvas.drawText(message: "no age limit", at: Point(x:10, y:398), size: 10)
+canvas.drawText(message: "at olympic auditorium", at: Point(x:150, y:428), size: 10)
+canvas.drawText(message: "1801 s. grand ave", at: Point(x:150, y:413), size: 10)
+canvas.drawText(message: "los angeles. california", at: Point(x:150, y:398), size: 10)
+canvas.drawText(message: "with the tourists", at: Point(x:275, y:428), size: 10)
+canvas.drawText(message: "multi death corporations", at: Point(x:275, y:413), size: 10)
+canvas.drawText(message: "new regime & red scare", at: Point(x:275, y:398), size: 10)
 
 
 
 
-
-
-
-//Last, draw a grid for referennce
-for y in stride(from: 0, through: 600, by: 50){
-    canvas.drawLine(from: Point(x:0,y:y), to: Point(x:400,y:y))
-}
-for x in stride(from: 0, through: 400, by: 50){
-    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
-}
+////Last, draw a grid for referennce
+//for y in stride(from: 0, through: 600, by: 50){
+//    canvas.drawLine(from: Point(x:0,y:y), to: Point(x:400,y:y))
+//}
+//for x in stride(from: 0, through: 400, by: 50){
+//    canvas.drawLine(from: Point(x: x, y: 0), to: Point(x: x, y: 600))
+//}
 
 /*:
  ## Use Source Control
