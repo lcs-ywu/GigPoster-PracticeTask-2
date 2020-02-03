@@ -82,6 +82,21 @@ for n in 0...3 {
     canvas.drawCustomShape(with: redPolygonVertices)
 }
 
+//Brown parallelograms
+for a in 0...1 {
+    for b in 0...1 {
+        var brownPolygonVertices:[Point] = []
+        brownPolygonVertices.append(Point(x: -140+320*b, y: 50+175*a))
+        brownPolygonVertices.append(Point(x: 10+320*b, y: 50+175*a))
+        brownPolygonVertices.append(Point(x: 60+320*b, y: 150+175*a))
+        brownPolygonVertices.append(Point(x: -90+320*b, y: 150+175*a))
+        canvas.drawShapesWithBorders=false
+        canvas.fillColor=brown
+        canvas.drawCustomShape(with: brownPolygonVertices)
+    }
+}
+
+
 
 
 //Last, draw a grid for referennce
